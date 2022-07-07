@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+    <title>Urna Eletrônica</title>
+</head>
+
+<body>
+
+    <div class="modo-retrato">
+        <div class="mr-logo">
+            <img src="assets/images/rotation.png" width="128" height="128" alt="rotacao">
+        </div>
+        <div class="mr-texto">
+            <h1>Gire a tela do seu dispositivo</h1>
+            <span>Caso esta mensagem persista, tente acessar a página em outro dispositivo maior.</span>
+        </div>
+    </div>
+    <div class="urna-eletronica">
+        <div class="ue-esquerda">
+            <div class="ue-tela">
+                <div class="area-principal">
+                    <div class="area-principal-esquerda">
+                        <div class="esquerda-1">
+                            <span id="voto_para">SEU VOTO PARA</span>
+                            <span class="relogio">--- --/--/---- 00:00:00</span>
+                        </div>
+                        <div class="cargos">
+                            <span id="cargo">PREFEITO</span>
+                        </div>
+                        <div class="numeros">
+                            <div class="numero pisca"></div>
+                            <div class="numero"></div>
+                        </div>
+                        <div class="descricao">
+                            Nome: -----<br />
+                            Partido: ---<br />
+                            Vice-Prefeito: -----<br />
+                        </div>
+                    </div>
+                    <div class="area-direita">
+                        <div class="imagem">
+                            <img src="assets/images/candidatos/lucas.png" alt="prefeito">
+                            Prefeito
+                        </div>
+                        <div class="imagem pequena">
+                            <img src="assets/images/candidatos/leticia.png" alt="vice">
+                            Vice-Prefeito
+                        </div>
+                    </div>
+                </div>
+                <div class="area-inferior">
+                    <div class="inferior-info" style="visibility: hidden;">
+                        Aperte a tecla:<br>
+                        CONFIRMA para CONFIRMAR este voto<br>
+                        CORRIGE para REINICIAR este voto
+                    </div>
+                    <div class="inferior-modo">
+                        <h2>TREINAMENTO</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ue-direita">
+            <div class="ue-info">
+                <div class="info-esquerda">
+                    <a target="_blank" href="https://www.instagram.com/3lucasrs/"><img class="ie-logo" src="assets/images/logo.png"
+                            alt="logo"></a>
+                </div>
+                <div class="info-direita">
+                    <div class="id-top">
+                        <div class="top-btn rld" onclick="reiniciar()">REINICIAR</div>
+                    </div>
+                    <div class="top-btn inf" onclick="info()">INFORMAÇÕES</div>
+                </div>
+            </div>
+            <div class="ue-teclado">
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="clicou('1')">1</div>
+                    <div class="teclado-botao" onclick="clicou('2')">2</div>
+                    <div class="teclado-botao" onclick="clicou('3')">3</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="clicou('4')">4</div>
+                    <div class="teclado-botao" onclick="clicou('5')">5</div>
+                    <div class="teclado-botao" onclick="clicou('6')">6</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="clicou('7')">7</div>
+                    <div class="teclado-botao" onclick="clicou('8')">8</div>
+                    <div class="teclado-botao" onclick="clicou('9')">9</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao" onclick="clicou('0')">0</div>
+                </div>
+                <div class="teclado-linha">
+                    <div class="teclado-botao botao-branco" onclick="votarBranco()">BRANCO</div>
+                    <div class="teclado-botao botao-corrige" onclick="corrige()">CORRIGE</div>
+                    <div class="teclado-botao botao-confirma" onclick="confirma()">CONFIRMA</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="m-content">
+            <div class="m-close">
+                <span onclick="info()">❌</span>
+            </div>
+            <div class="m-candidatos">
+                <div class="c-partido">
+                    <h1>PDA</h1>
+                    <h2>VEREADORES</h2>
+                    <span><strong>17111</strong> - <i>Pica-Pau</i></span>
+                    <span><strong>17222</strong> - <i>Leôncio</i></span>
+                    <span><strong>17333</strong> - <i>Zeca Urubu</i></span>
+                    <h2>PREFEITO</h2>
+                    <span><strong>17</strong> - <i>Lucas<br />(Vice: Leticia)</i></span>
+                </div>
+                <div class="c-partido">
+                    <h1>DSG</h1>
+                    <h2>VEREADORES</h2>
+                    <span><strong>33001</strong> - <i>Mordecai</i></span>
+                    <span><strong>33002</strong> - <i>Rigby</i></span>
+                    <span><strong>33003</strong> - <i>Pairulito</i></span>
+                    <h2>PREFEITO</h2>
+                    <span><strong>33</strong> - <i>Finn<br />(Vice: Jake)</i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/etapas.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
